@@ -10,7 +10,7 @@ All models and data are ready. To run, download this repository, open it using A
 After downloading the data set from kaggel, updating it on roboflow, visualizing the data, checking basic information, and dividing it into train, validation and test data at ratio of 70%, 20% and 10%.
 ![image](https://user-images.githubusercontent.com/30094719/111058555-c3541c00-84d2-11eb-94c1-6eacf469b504.png)
 ### Training 
-check Roboflow-TFLite-Object-Detection.ipynb file 
+check [Roboflow-TFLite-Object-Detection.ipynb](https://github.com/BEOKS/Bicycle-Helmet-Wearing-Detection/blob/main/Roboflow-TFLite-Object-Detection.ipynb) file, The file is very complex, so I recommend viewing it in colab. 
 
 ### Test
 As a result of learning, you can see the result that distinguishes between wearing a helmet and not wearing it. You can check out the demo video through the link below.<br>
