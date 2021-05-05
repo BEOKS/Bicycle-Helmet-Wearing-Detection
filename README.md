@@ -3,7 +3,7 @@
 ### Overview
 After creating a tensorflow lite model that continuously performs bicycle helmet detection using quantized [MobileNet SSD](https://github.com/tensorflow/models/tree/master/research/object_detection) and [Bicycle Helmet Dataset](https://www.kaggle.com/andrewmvd/helmet-detection), it was made to be used in real time on Android by referring to TensorFlow Lite Object Detection Android Demo.
 ## Usuage
-All models and data are ready. To run, download this repository, open it using Android Studio, and run it with an emulator or personal device.
+All models and code are ready. To run, download this repository, open it using Android Studio, and run it with an emulator or personal device.
 
 ## Model Training
 ### Dataset
