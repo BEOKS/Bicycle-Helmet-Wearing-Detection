@@ -16,6 +16,8 @@
 
 package org.tensorflow.lite.examples.detection;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
 import android.graphics.Canvas;
@@ -27,9 +29,13 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.media.ImageReader.OnImageAvailableListener;
 import android.os.SystemClock;
+import android.util.Log;
 import android.util.Size;
 import android.util.TypedValue;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -81,6 +87,18 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
   private MultiBoxTracker tracker;
 
   private BorderedText borderedText;
+
+  public static final int DETECTION_COMPLETE=1,TIME_OUT=0;
+
+  /**
+   * Helmet Wearing Detection Activity
+   *
+   * if helmet wearing is detected, then activity will be finished and return DETECTION_COMPLETE activity result.
+   * when you call activity with intent, you have to set max_time_out
+   *  second, max patient time for checking helmet wearing detection,
+   *  if time is out, then activity will be finished and return TIME_OUT activity result
+   */
+  private int max_patient_time;
 
   @Override
   public void onPreviewSizeChosen(final Size size, final int rotation) {
@@ -199,6 +217,12 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
                 new ArrayList<Detector.Recognition>();
 
             for (final Detector.Recognition result : results) {
+              Log.i("Detector Confidence : ",result.getId()+ " "+result.getConfidence().toString());
+              if(result.getId().equals("1") && result.getConfidence()>0.9){
+                Intent intent=getIntent();
+                setResult(DETECTION_COMPLETE,intent);
+                finish();
+              }
               final RectF location = result.getLocation();
               if (location != null && result.getConfidence() >= minimumConfidence) {
                 canvas.drawRect(location, paint);
