@@ -36,6 +36,8 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import com.github.BEOKS.Bicycle_Helmet_Wearing_Detection.R;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

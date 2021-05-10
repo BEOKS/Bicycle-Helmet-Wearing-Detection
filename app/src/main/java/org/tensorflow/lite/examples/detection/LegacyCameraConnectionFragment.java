@@ -30,6 +30,9 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.github.BEOKS.Bicycle_Helmet_Wearing_Detection.R;
+
 import java.io.IOException;
 import java.util.List;
 import org.tensorflow.lite.examples.detection.customview.AutoFitTextureView;

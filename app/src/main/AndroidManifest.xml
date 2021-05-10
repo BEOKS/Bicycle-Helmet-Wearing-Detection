@@ -29,5 +29,5 @@
 <!--    </application>-->
 <!--</manifest>-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-package="com.github.BEOKS.Bicycle-Helmet-Wearing-Detection">
+package="com.github.BEOKS.Bicycle_Helmet_Wearing_Detection">
 </manifest>

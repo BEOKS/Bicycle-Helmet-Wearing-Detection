@@ -52,6 +52,9 @@ import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
+import com.github.BEOKS.Bicycle_Helmet_Wearing_Detection.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
