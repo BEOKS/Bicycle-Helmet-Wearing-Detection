@@ -218,7 +218,7 @@ public class DetectorActivity extends CameraActivity implements OnImageAvailable
 
             for (final Detector.Recognition result : results) {
               Log.i("Detector Confidence : ",result.getId()+ " "+result.getConfidence().toString());
-              if(result.getId().equals("1") && result.getConfidence()>0.9){
+              if(result.getId().equals("1") && result.getConfidence()>0.93){
                 Intent intent=getIntent();
                 setResult(DETECTION_COMPLETE,intent);
                 finish();
