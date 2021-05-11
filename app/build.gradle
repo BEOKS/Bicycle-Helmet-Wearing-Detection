@@ -1,6 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'de.undercouch.download'
-
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.BEOKS.Bicycle-Helmet-Wearing-Detection'
+repositories {
+    mavenCentral()
+}
 android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
