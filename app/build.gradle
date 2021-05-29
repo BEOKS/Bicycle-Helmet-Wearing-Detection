@@ -1,10 +1,10 @@
 apply plugin: 'com.android.library'
 apply plugin: 'de.undercouch.download'
 apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'maven-publish'
 
 group='com.github.BEOKS'
-version='0.1'
-
+version='0.0.7'
 android {
     compileSdkVersion 28
     buildToolsVersion '28.0.3'
@@ -56,7 +56,21 @@ project.ext.TMP_DIR   = project.buildDir.toString() + '/downloads'
 // Download default models; if you wish to use your own models then
 // place them in the "assets" directory and comment out this line.
 apply from:'download_model.gradle'
-
+repositories {
+    mavenCentral()
+    google()
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = 'org.github.HelemtDetection'
+            artifactId = 'app'
+            version = '0.0.7'
+        }
+    }
+}
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
     implementation 'org.tensorflow:tensorflow-lite-support:0.1.0-rc1'
