@@ -1,6 +1,5 @@
 # Bicycle-Helmet-Wearing-Detection
-<img src="https://img.shields.io/badge/Tensorflow-2.0-brightgreen">
-
+<img src="https://img.shields.io/badge/Tensorflow-2.0-brightgreen"> <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/BEOKS/Bicycle-Helmet-Wearing-Detection"> ![GitHub Release Date](https://img.shields.io/github/release-date/BEOKS/Bicycle-Helmet-Wearing-Detection)
 ### Overview
 After creating a tensorflow lite model that continuously performs bicycle helmet detection using quantized [MobileNet SSD](https://github.com/tensorflow/models/tree/master/research/object_detection) and [Bicycle Helmet Dataset](https://www.kaggle.com/andrewmvd/helmet-detection), it was made to be used in real time on Android by referring to TensorFlow Lite Object Detection Android Demo.
 ## Usuage
